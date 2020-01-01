@@ -32,7 +32,11 @@ public class UserController {
 
 	@GetMapping("/status/check")
 	public String status() {
-		return "Working from User on port " + environment.getProperty("local.server.port") + environment.getProperty("token.secret");
+		return "Working from User on port "
+				+ environment.getProperty("local.server.port")
+				+ environment.getProperty("token.secret")
+				+ " encryptet text forom native properties: "
+				+ environment.getProperty("encrypted.text");
 	}
 
 	@GetMapping("/status/check/JWT")
@@ -49,6 +53,8 @@ public class UserController {
 		UserDTO createdUser = userService.createUser(userDTO);
 
 		CreateUserResponseModel responseModel = modelMapper.map(createdUser, CreateUserResponseModel.class);
+
+
 
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseModel);
 	}
