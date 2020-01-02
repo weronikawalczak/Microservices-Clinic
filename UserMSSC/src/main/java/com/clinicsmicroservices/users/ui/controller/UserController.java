@@ -3,6 +3,7 @@ package com.clinicsmicroservices.users.ui.controller;
 import com.clinicsmicroservices.users.shared.UserDTO;
 import com.clinicsmicroservices.users.ui.model.CreateUserRequestModel;
 import com.clinicsmicroservices.users.ui.model.CreateUserResponseModel;
+import com.clinicsmicroservices.users.ui.model.UserResponseModel;
 import com.clinicsmicroservices.users.ui.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -15,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.MediaType;
 
 import javax.validation.Valid;
 
@@ -59,6 +61,14 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseModel);
 	}
 
+	@GetMapping(value = "/{userId}", produces = {MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<UserResponseModel> getUser(@PathVariable("userId") String userId){
+
+		UserDTO userDto = userService.getUserByUserId(userId);
+		UserResponseModel returnValue = new ModelMapper().map(userDto, UserResponseModel.class);
+
+		return ResponseEntity.status(HttpStatus.OK).body(returnValue);
+	}
 
 
 //	@GetMapping("/status/check/JWT")

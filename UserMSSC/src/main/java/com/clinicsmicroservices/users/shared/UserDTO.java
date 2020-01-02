@@ -1,9 +1,11 @@
 package com.clinicsmicroservices.users.shared;
 
 import com.clinicsmicroservices.users.data.UserEntity;
+import com.clinicsmicroservices.users.ui.model.AlbumResponseModel;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Builder
@@ -18,5 +20,6 @@ public class UserDTO implements Serializable {
 	private String email;
 	private String userId;
 	private String encryptedPassword;
+	private List<AlbumResponseModel> albums;
 
 }
