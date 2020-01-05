@@ -37,6 +37,7 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
 		
 		// By default, UsernamePasswordAuthenticationFilter listens to "/login" path. 
 		// In our case, we use "/auth". So, we need to override the defaults.
+		//IMPORTANT HERE WE EXPOSE /auth INSTEAD OF /login
 		this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher(jwtConfig.getUri(), "POST"));
 	}
 	
