@@ -1,5 +1,6 @@
 package com.clinicsmicroservices.users.ui.service;
 
+import com.clinicsmicroservices.users.data.AlbumsServiceClient;
 import com.clinicsmicroservices.users.data.UserEntity;
 import com.clinicsmicroservices.users.data.UserRepository;
 import com.clinicsmicroservices.users.shared.UserDTO;
@@ -29,12 +30,17 @@ public class UserServiceImpl implements UserService {
 	UserRepository userRepository;
 	BCryptPasswordEncoder bCryptPasswordEncoder;
 	RestTemplate restTemplate;
+	AlbumsServiceClient albumsServiceClient;
 
 	@Autowired
-	public UserServiceImpl(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder, RestTemplate restTemplate) {
+	public UserServiceImpl(UserRepository userRepository,
+	                       BCryptPasswordEncoder bCryptPasswordEncoder,
+	                       RestTemplate restTemplate,
+	                       AlbumsServiceClient albumsServiceClient) {
 		this.userRepository = userRepository;
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
 		this.restTemplate = restTemplate;
+		this.albumsServiceClient = albumsServiceClient;
 	}
 
 	@Override
@@ -80,13 +86,16 @@ public class UserServiceImpl implements UserService {
 
 		String albumsUrl = String.format("http://albums-ws/users/%s/albums", userId);
 
-		ResponseEntity<List<AlbumResponseModel>> albumsListResponse = restTemplate.exchange(
-				albumsUrl,
-				HttpMethod.GET,
-				null,
-				new ParameterizedTypeReference<List<AlbumResponseModel>>() {
-		});
-		List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
+//		ResponseEntity<List<AlbumResponseModel>> albumsListResponse = restTemplate.exchange(
+//				albumsUrl,
+//				HttpMethod.GET,
+//				null,
+//				new ParameterizedTypeReference<List<AlbumResponseModel>>() {
+//		});
+//		List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
+
+		List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
+
 		userDTO.setAlbums(albumsList);
 
 		return userDTO;
