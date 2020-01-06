@@ -41,7 +41,6 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers(HttpMethod.GET, "/gallery/gallery-public").permitAll()
 				// any other requests must be authenticated
 				.anyRequest().authenticated();
-
 	}
 	
 	@Bean
