@@ -12,12 +12,12 @@ public class AuthController {
     @Autowired
     AuthService service;
 
-    @PostMapping("/register")
-    public MedicalUser registerUser(@RequestParam MedicalUser user) {
-       return service.saveUser(user);
-    }
+//    @PostMapping("/register")
+//    public MedicalUser registerUser(@RequestParam MedicalUser user) {
+//       return service.saveUser(user);
+//    }
 
-    @GetMapping("/public")
+    @RequestMapping("/public")
     public String securedMethod() {
         return "test";
     }
