@@ -1,6 +1,7 @@
 package com.eureka.auth.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -9,12 +10,13 @@ import javax.persistence.*;
 @Table(name = "medicalUser")
 public class MedicalUser {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Integer id;
 
     @Column(unique = true)
     private String username;
 
+    @Setter
     private String password;
     private String role;
 }

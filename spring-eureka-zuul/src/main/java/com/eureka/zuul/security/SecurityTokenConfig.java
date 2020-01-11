@@ -39,6 +39,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
 				//Example of something unprotected
 				.antMatchers(HttpMethod.GET, "/gallery/gallery-public").permitAll()
+				.antMatchers(HttpMethod.POST, "/auth/register").permitAll()
 				// any other requests must be authenticated
 				.anyRequest().authenticated();
 	}
