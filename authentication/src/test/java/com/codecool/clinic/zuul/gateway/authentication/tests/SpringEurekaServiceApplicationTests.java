@@ -1,4 +1,4 @@
-package com.eureka.zuul.tests;
+package com.codecool.clinic.zuul.gateway.authentication.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringZuulApplicationTests {
+public class SpringEurekaServiceApplicationTests {
 
 	@Test
 	public void contextLoads() {

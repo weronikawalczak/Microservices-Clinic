@@ -1,4 +1,4 @@
-package com.eureka.zuul.security;
+package com.codecool.clinic.zuul.gateway.security;
 
 import javax.servlet.http.HttpServletResponse;
 
