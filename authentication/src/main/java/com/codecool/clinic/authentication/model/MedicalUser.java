@@ -1,4 +1,4 @@
-package com.eureka.auth.model;
+package com.codecool.clinic.authentication.model;
 
 import lombok.Getter;
 import lombok.Setter;

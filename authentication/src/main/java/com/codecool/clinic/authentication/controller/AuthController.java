@@ -1,7 +1,7 @@
-package com.eureka.auth.controller;
+package com.codecool.clinic.authentication.controller;
 
-import com.eureka.auth.model.MedicalUser;
-import com.eureka.auth.service.AuthService;
+import com.codecool.clinic.authentication.service.AuthService;
+import com.codecool.clinic.authentication.model.MedicalUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

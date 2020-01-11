@@ -1,7 +1,7 @@
-package com.eureka.auth.service;
+package com.codecool.clinic.authentication.service;
 
-import com.eureka.auth.model.MedicalUser;
-import com.eureka.auth.repository.UserRepository;
+import com.codecool.clinic.authentication.model.MedicalUser;
+import com.codecool.clinic.authentication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;

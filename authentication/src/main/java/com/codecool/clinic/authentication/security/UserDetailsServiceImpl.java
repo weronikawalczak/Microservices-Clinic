@@ -1,11 +1,10 @@
-package com.eureka.auth.security;
+package com.codecool.clinic.authentication.security;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import com.eureka.auth.model.MedicalUser;
-import com.eureka.auth.repository.UserRepository;
+import com.codecool.clinic.authentication.model.MedicalUser;
+import com.codecool.clinic.authentication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;

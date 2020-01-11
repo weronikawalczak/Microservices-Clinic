@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.eureka.auth</groupId>
-	<artifactId>spring-eureka-auth</artifactId>
+	<groupId>com.codecool.clinic</groupId>
+	<artifactId>authentication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-eureka-auth</name>
-	<description>Demo project for Spring Boot Cloud</description>
+	<name>authentication</name>
+	<description>Authentication service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

@@ -1,4 +1,4 @@
-package com.eureka.auth.security;
+package com.codecool.clinic.authentication.security;
 
 import javax.servlet.http.HttpServletResponse;
 

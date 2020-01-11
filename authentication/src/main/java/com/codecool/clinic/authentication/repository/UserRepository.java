@@ -1,6 +1,6 @@
-package com.eureka.auth.repository;
+package com.codecool.clinic.authentication.repository;
 
-import com.eureka.auth.model.MedicalUser;
+import com.codecool.clinic.authentication.model.MedicalUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

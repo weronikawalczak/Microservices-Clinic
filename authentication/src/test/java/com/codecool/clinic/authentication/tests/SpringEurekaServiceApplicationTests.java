@@ -1,4 +1,4 @@
-package com.eureka.auth.tests;
+package com.codecool.clinic.authentication.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
