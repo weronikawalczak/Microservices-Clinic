@@ -1,4 +1,4 @@
-package com.eureka.server.tests;
+package com.codecool.clinic.eureka.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
