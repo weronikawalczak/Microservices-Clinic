@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Getter
-@Table(name = "medicalUser")
-public class MedicalUser {
+@Table(name = "system_user")
+public class SystemUser {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Integer id;

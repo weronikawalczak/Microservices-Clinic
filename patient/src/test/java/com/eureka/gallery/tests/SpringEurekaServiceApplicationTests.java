@@ -1,4 +1,4 @@
-package com.codecool.clinic.zuul.gateway.authentication.tests;
+package com.eureka.gallery.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

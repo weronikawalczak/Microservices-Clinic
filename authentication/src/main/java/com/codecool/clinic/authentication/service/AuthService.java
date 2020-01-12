@@ -1,7 +1,7 @@
 package com.codecool.clinic.authentication.service;
 
-import com.codecool.clinic.authentication.model.MedicalUser;
+import com.codecool.clinic.authentication.model.SystemUser;
 
 public interface AuthService {
-    MedicalUser saveUser(MedicalUser user);
+    SystemUser saveUser(SystemUser user);
 }
