@@ -3,11 +3,13 @@ package com.codecool.clinic.patient.service;
 import com.codecool.clinic.patient.model.Patient;
 import com.codecool.clinic.patient.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PatientServiceImpl implements PatientService{
-   @Autowired
-    PatientRepository patientRepository;
 
+   @Autowired
+   PatientRepository patientRepository;
 
     @Override
     public Patient savePatient(Patient patient) {
