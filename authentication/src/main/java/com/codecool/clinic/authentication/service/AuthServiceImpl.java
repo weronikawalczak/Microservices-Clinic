@@ -1,7 +1,7 @@
 package com.codecool.clinic.authentication.service;
 
 import com.codecool.clinic.authentication.client.AuthClient;
-import com.codecool.clinic.authentication.model.SystemUser;
+import com.codecool.clinic.authentication.model.AuthUser;
 import com.codecool.clinic.authentication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,10 +16,13 @@ public class AuthServiceImpl implements AuthService{
     @Autowired
     AuthClient authClient;
 
-    public SystemUser saveUser(SystemUser user){
+    public AuthUser saveUser(AuthUser user){
+        user.setRole("PATIENT");
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
-        authClient.callPatient();
-        return userRepository.save(user);
+
+        userRepository.save(user);
+        authClient.registerPatient(user);
+        return user;
     }
 }
 

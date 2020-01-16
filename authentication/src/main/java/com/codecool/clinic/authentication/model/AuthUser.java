@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Table(name = "system_user")
-public class SystemUser {
+public class AuthUser {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Integer id;
@@ -18,5 +18,6 @@ public class SystemUser {
 
     @Setter
     private String password;
+    @Setter
     private String role;
 }

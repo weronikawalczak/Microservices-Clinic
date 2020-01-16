@@ -3,7 +3,7 @@ package com.codecool.clinic.authentication.security;
 import java.util.List;
 import java.util.Optional;
 
-import com.codecool.clinic.authentication.model.SystemUser;
+import com.codecool.clinic.authentication.model.AuthUser;
 import com.codecool.clinic.authentication.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService  {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Optional<SystemUser> user = userRepository.findByUsername(username);
+		Optional<AuthUser> user = userRepository.findByUsername(username);
 
 		if(!user.isPresent()){
 			throw new UsernameNotFoundException("Username: " + username + " not found");

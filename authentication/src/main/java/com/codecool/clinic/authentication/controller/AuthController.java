@@ -1,7 +1,7 @@
 package com.codecool.clinic.authentication.controller;
 
 import com.codecool.clinic.authentication.service.AuthService;
-import com.codecool.clinic.authentication.model.SystemUser;
+import com.codecool.clinic.authentication.model.AuthUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -17,7 +17,7 @@ public class AuthController {
     AuthService service;
 
     @PostMapping("/register")
-    public SystemUser registerUser(@RequestBody SystemUser user) {
+    public AuthUser registerUser(@RequestBody AuthUser user) {
         return service.saveUser(user);
     }
 }
