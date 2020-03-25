@@ -3,7 +3,6 @@ Implementation of medical unit administration system based on Spring Framework. 
 
 ## Table of contents
 * [Structure](#structure)
-* [Eureka](##eureka)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Screenshots](#screenshots)
