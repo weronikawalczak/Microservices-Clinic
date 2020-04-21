@@ -1,5 +1,5 @@
 # Microservices-Clinic
-Implementation of medical unit administration system based on Spring Framework. The system is set up as distributed microservices architecture with use of Spring Boot tools. Main functionality of that system is registration of users(patients, doctors), booking visits and managing medical units.   
+Implementation of medical unit administration system based on Spring Framework. The system is set up as distributed microservices architecture with use of Spring Boot tools. Main functionality of that system is registration of users(patients, doctors), managing doctors calendars and registering patients for visits.   
 
 ## Table of contents
 * [Structure](#structure)
@@ -26,8 +26,10 @@ Service implementing clinic related logic.
 ## Technologies
 * Java
 * Spring
+* Netflix microservices libs
 * Hibernate
-
+* PostgreSQL
+* React
 
 ## Setup
 
