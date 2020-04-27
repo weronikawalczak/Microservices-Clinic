@@ -32,7 +32,13 @@ Service implementing clinic related logic.
 * React
 
 ## Screenshots
-
+![Example screenshot](./screenshots/mainPage.png)
+![Example screenshot](./screenshots/filter.png)
+![Example screenshot](./screenshots/cart.png)
+![Example screenshot](./screenshots/checkout.png)
+![Example screenshot](./screenshots/payment.png)
+![Example screenshot](./screenshots/payPal.png)
+![Example screenshot](./screenshots/creditCard.png)
 
 ## Status
 Project is in progress.
