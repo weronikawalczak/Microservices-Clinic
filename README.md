@@ -31,9 +31,6 @@ Service implementing clinic related logic.
 * PostgreSQL
 * React
 
-## Setup
-
-
 ## Screenshots
 
 
